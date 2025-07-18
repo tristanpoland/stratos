@@ -1,8 +1,6 @@
 module github.com/cloudfoundry/stratos/src/jetstream
 
-go 1.21
-
-toolchain go1.21.9
+go 1.23.0
 
 replace (
 	github.com/cloudfoundry/stratos/src/jetstream/api => ./api
@@ -31,13 +29,14 @@ require (
 	github.com/antonlindstrom/pgstore v0.0.0-20220421113606-e3a6e3fed12a
 	github.com/cf-stratos/mysqlstore v0.0.0-20170822100912-304308519d13
 	github.com/cloudfoundry-community/go-cfenv v1.18.0
+	github.com/cloudfoundry/noaa/v2 v2.3.0
+	github.com/cloudfoundry/sonde-go v0.0.0-20230911203642-fa89d986ae20
 	github.com/cloudfoundry/stratos/src/jetstream/api v0.0.0-00010101000000-000000000000
+	github.com/cloudfoundry/stratos/src/jetstream/docs v0.0.0-00010101000000-000000000000
 	github.com/cloudfoundry/stratos/src/jetstream/plugins/cfapppush v0.0.0-00010101000000-000000000000
 	github.com/cloudfoundry/stratos/src/jetstream/plugins/kubernetes v0.0.0-20210416105629-f34f428ca775
 	github.com/cloudfoundry/stratos/src/jetstream/plugins/kubernetes/auth v0.0.0-00010101000000-000000000000
 	github.com/cloudfoundry/stratos/src/jetstream/plugins/monocular v0.0.0-20210416105629-f34f428ca775
-	github.com/cloudfoundry/noaa/v2 v2.3.0
-	github.com/cloudfoundry/sonde-go v0.0.0-20230911203642-fa89d986ae20
 	github.com/domodwyer/mailyak v3.1.1+incompatible
 	github.com/go-sql-driver/mysql v1.7.1
 	github.com/golang/mock v1.6.0
@@ -215,7 +214,7 @@ require (
 	go.starlark.net v0.0.0-20230525235612-a134d8f9ddca // indirect
 	golang.org/x/exp v0.0.0-20220303212507-bbda1eaf7a17 // indirect
 	golang.org/x/net v0.17.0 // indirect
-	golang.org/x/oauth2 v0.12.0 // indirect
+	golang.org/x/oauth2 v0.27.0 // indirect
 	golang.org/x/sync v0.3.0 // indirect
 	golang.org/x/sys v0.15.0 // indirect
 	golang.org/x/term v0.15.0 // indirect
