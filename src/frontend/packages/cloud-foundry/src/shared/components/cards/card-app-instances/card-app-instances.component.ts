@@ -15,9 +15,10 @@ const appInstanceScaleToZeroConfirmation = new ConfirmationDialogConfig('Set Ins
   'Are you sure you want to set the instance count to 0?', 'Confirm', true);
 
 @Component({
-  selector: 'app-card-app-instances',
+selector: 'app-card-app-instances',
   templateUrl: './card-app-instances.component.html',
-  styleUrls: ['./card-app-instances.component.scss']
+  styleUrls: ['./card-app-instances.component.scss'],
+  standalone: false
 })
 export class CardAppInstancesComponent implements OnInit, OnDestroy {
 

@@ -19,12 +19,13 @@ export class SchemaFormConfig {
 }
 
 @Component({
-  selector: 'app-schema-form',
+selector: 'app-schema-form',
   templateUrl: './schema-form.component.html',
   styleUrls: ['./schema-form.component.scss'],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher }
-  ]
+  ],
+  standalone: false
 })
 export class SchemaFormComponent implements OnInit, OnDestroy, AfterContentInit {
 

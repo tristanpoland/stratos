@@ -9,10 +9,11 @@ import { ConfigService } from '../shared/services/config.service';
 import { ReposService } from '../shared/services/repos.service';
 
 @Component({
-  selector: 'app-charts',
+selector: 'app-charts',
   templateUrl: './charts.component.html',
   styleUrls: ['./charts.component.scss'],
-  viewProviders: [MatIconRegistry]
+  viewProviders: [MatIconRegistry],
+  standalone: false
 })
 export class ChartsComponent implements OnInit {
   charts: Chart[] = [];

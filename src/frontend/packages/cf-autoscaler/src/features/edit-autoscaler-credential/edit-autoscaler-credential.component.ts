@@ -23,12 +23,13 @@ import {
 import { AppAutoscalerCredential } from '../../store/app-autoscaler.types';
 
 @Component({
-  selector: 'app-edit-autoscaler-credential',
+selector: 'app-edit-autoscaler-credential',
   templateUrl: './edit-autoscaler-credential.component.html',
   styleUrls: ['./edit-autoscaler-credential.component.scss'],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher },
-  ]
+  ],
+  standalone: false
 })
 export class EditAutoscalerCredentialComponent implements OnInit, OnDestroy {
 

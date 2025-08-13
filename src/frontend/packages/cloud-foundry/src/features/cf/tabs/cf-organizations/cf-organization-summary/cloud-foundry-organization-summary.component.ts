@@ -18,10 +18,10 @@ import { CloudFoundryEndpointService } from '../../../services/cloud-foundry-end
 import { CloudFoundryOrganizationService } from '../../../services/cloud-foundry-organization.service';
 
 @Component({
-  selector: 'app-cloud-foundry-organization-summary',
+selector: 'app-cloud-foundry-organization-summary',
   templateUrl: './cloud-foundry-organization-summary.component.html',
   styleUrls: ['./cloud-foundry-organization-summary.component.scss'],
-
+  standalone: false
 })
 export class CloudFoundryOrganizationSummaryComponent {
   appLink: () => void;

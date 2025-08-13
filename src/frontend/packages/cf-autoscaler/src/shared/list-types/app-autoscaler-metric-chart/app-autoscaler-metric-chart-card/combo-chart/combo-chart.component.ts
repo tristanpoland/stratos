@@ -21,10 +21,11 @@ import { scaleBand, scaleLinear, scalePoint, scaleTime } from 'd3-scale';
 import { curveLinear } from 'd3-shape';
 
 @Component({
-  selector: 'app-autoscaler-combo-chart-component',
+selector: 'app-autoscaler-combo-chart-component',
   templateUrl: './combo-chart.component.html',
   styleUrls: ['./combo-chart.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class AppAutoscalerComboChartComponent extends BaseChartComponent {
 

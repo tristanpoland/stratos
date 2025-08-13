@@ -10,9 +10,10 @@ import { UserInviteConfigureService } from '../user-invite.service';
 
 
 @Component({
-  selector: 'app-user-invite-configuration-dialog',
+selector: 'app-user-invite-configuration-dialog',
   templateUrl: './user-invite-configuration-dialog.component.html',
-  styleUrls: ['./user-invite-configuration-dialog.component.scss']
+  styleUrls: ['./user-invite-configuration-dialog.component.scss'],
+  standalone: false
 })
 export class UserInviteConfigurationDialogComponent {
   connecting$: Observable<boolean>;

@@ -40,9 +40,10 @@ export class ManageUsersSetUsernamesHelper {
 }
 
 @Component({
-  selector: 'app-manage-users-set-usernames',
+selector: 'app-manage-users-set-usernames',
   templateUrl: './manage-users-set-usernames.component.html',
-  styleUrls: ['./manage-users-set-usernames.component.scss']
+  styleUrls: ['./manage-users-set-usernames.component.scss'],
+  standalone: false
 })
 export class ManageUsersSetUsernamesComponent implements OnInit {
 

@@ -20,9 +20,10 @@ import { CloudFoundryOrganizationService } from '../../../../../services/cloud-f
 import { CloudFoundrySpaceService } from '../../../../../services/cloud-foundry-space.service';
 
 @Component({
-  selector: 'app-cloud-foundry-space-summary',
+selector: 'app-cloud-foundry-space-summary',
   templateUrl: './cloud-foundry-space-summary.component.html',
-  styleUrls: ['./cloud-foundry-space-summary.component.scss']
+  styleUrls: ['./cloud-foundry-space-summary.component.scss'],
+  standalone: false
 })
 export class CloudFoundrySpaceSummaryComponent {
   detailsLoading$: Observable<boolean>;

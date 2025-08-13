@@ -19,6 +19,7 @@ type MessageUpdater = (msg: string) => void;
   selector: 'app-kubedash-configuration',
   templateUrl: './kubedash-configuration.component.html',
   styleUrls: ['./kubedash-configuration.component.scss'],
+  standalone: false,
   providers: [
     {
       provide: BaseKubeGuid,

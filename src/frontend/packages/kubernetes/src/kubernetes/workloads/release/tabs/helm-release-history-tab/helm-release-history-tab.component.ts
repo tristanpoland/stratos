@@ -12,7 +12,8 @@ import { HelmReleaseHelperService } from './../helm-release-helper.service';
 @Component({
   selector: 'app-helm-release-history-tab',
   templateUrl: './helm-release-history-tab.component.html',
-  styleUrls: ['./helm-release-history-tab.component.scss']
+  styleUrls: ['./helm-release-history-tab.component.scss'],
+  standalone: false
 })
 export class HelmReleaseHistoryTabComponent {
 

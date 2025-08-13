@@ -21,12 +21,13 @@ import {
 } from '../edit-autoscaler-policy-step4/edit-autoscaler-policy-step4.component';
 
 @Component({
-  selector: 'app-edit-autoscaler-policy-step3',
+selector: 'app-edit-autoscaler-policy-step3',
   templateUrl: './edit-autoscaler-policy-step3.component.html',
   styleUrls: ['./edit-autoscaler-policy-step3.component.scss'],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher }
-  ]
+  ],
+  standalone: false
 })
 export class EditAutoscalerPolicyStep3Component extends EditAutoscalerPolicyDirective implements OnInit {
 

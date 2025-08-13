@@ -8,13 +8,14 @@ import { ApplicationService } from '../../../../cloud-foundry/src/features/appli
 import { EditAutoscalerPolicyService } from './edit-autoscaler-policy-service';
 
 @Component({
-  selector: 'app-edit-autoscaler-policy',
+selector: 'app-edit-autoscaler-policy',
   templateUrl: './edit-autoscaler-policy.component.html',
   styleUrls: ['./edit-autoscaler-policy.component.scss'],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher },
     EditAutoscalerPolicyService
-  ]
+  ],
+  standalone: false
 })
 export class EditAutoscalerPolicyComponent implements OnInit {
 

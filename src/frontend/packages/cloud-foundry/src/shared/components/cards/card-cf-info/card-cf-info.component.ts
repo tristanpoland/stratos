@@ -14,9 +14,10 @@ import {
 import { UserInviteConfigureService, UserInviteService } from '../../../../features/cf/user-invites/user-invite.service';
 
 @Component({
-  selector: 'app-card-cf-info',
+selector: 'app-card-cf-info',
   templateUrl: './card-cf-info.component.html',
-  styleUrls: ['./card-cf-info.component.scss']
+  styleUrls: ['./card-cf-info.component.scss'],
+  standalone: false
 })
 export class CardCfInfoComponent implements OnInit, OnDestroy {
   public apiUrl: string;

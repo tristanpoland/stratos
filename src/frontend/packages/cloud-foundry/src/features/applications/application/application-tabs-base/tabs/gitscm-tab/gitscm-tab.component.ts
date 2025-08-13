@@ -31,6 +31,7 @@ import { EnvVarStratosProject } from '../build-tab/application-env-vars.service'
   selector: 'app-gitscm-tab',
   templateUrl: './gitscm-tab.component.html',
   styleUrls: ['./gitscm-tab.component.scss'],
+  standalone: false,
   providers: [
     {
       provide: ListConfig,

@@ -5,9 +5,10 @@ import { environment } from '../../../environments/environment';
 import { ConfirmationDialogConfig, TypeToConfirm } from '../confirmation-dialog.config';
 
 @Component({
-  selector: 'app-dialog-confirm',
+selector: 'app-dialog-confirm',
   templateUrl: './dialog-confirm.component.html',
-  styleUrls: ['./dialog-confirm.component.scss']
+  styleUrls: ['./dialog-confirm.component.scss'],
+  standalone: false
 })
 export class DialogConfirmComponent {
   public textToMatch: string;

@@ -5,9 +5,10 @@ import { interval, Subscription } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-log-out-dialog',
+selector: 'app-log-out-dialog',
   templateUrl: './log-out-dialog.component.html',
-  styleUrls: ['./log-out-dialog.component.scss']
+  styleUrls: ['./log-out-dialog.component.scss'],
+  standalone: false
 })
 export class LogOutDialogComponent implements OnInit, OnDestroy {
   constructor(

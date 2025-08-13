@@ -2,10 +2,11 @@ import { Component, Input, OnChanges, OnInit, ViewEncapsulation } from '@angular
 import { ColorHelper, ScaleType } from '@swimlane/ngx-charts';
 
 @Component({
-  selector: 'app-ring-chart',
+selector: 'app-ring-chart',
   templateUrl: './ring-chart.component.html',
   styleUrls: ['./ring-chart.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class RingChartComponent implements OnInit, OnChanges {
 

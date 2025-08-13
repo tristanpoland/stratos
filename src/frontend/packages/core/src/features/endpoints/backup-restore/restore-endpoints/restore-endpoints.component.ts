@@ -13,12 +13,13 @@ import { StepOnNextFunction, StepOnNextResult } from '../../../../shared/compone
 import { RestoreEndpointsService } from '../restore-endpoints.service';
 
 @Component({
-  selector: 'app-restore-endpoints',
+selector: 'app-restore-endpoints',
   templateUrl: './restore-endpoints.component.html',
   styleUrls: ['./restore-endpoints.component.scss'],
   providers: [
     RestoreEndpointsService
-  ]
+  ],
+  standalone: false
 })
 export class RestoreEndpointsComponent {
 

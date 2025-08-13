@@ -8,9 +8,10 @@ import { filter, first, map, pairwise, tap } from 'rxjs/operators';
 import { safeUnsubscribe } from '../../../core/utils.service';
 
 @Component({
-  selector: 'app-add-api-key-dialog',
+selector: 'app-add-api-key-dialog',
   templateUrl: './add-api-key-dialog.component.html',
-  styleUrls: ['./add-api-key-dialog.component.scss']
+  styleUrls: ['./add-api-key-dialog.component.scss'],
+  standalone: false
 })
 export class AddApiKeyDialogComponent implements OnDestroy {
 

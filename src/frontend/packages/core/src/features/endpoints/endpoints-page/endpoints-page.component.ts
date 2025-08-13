@@ -34,13 +34,14 @@ import { SnackBarService } from '../../../shared/services/snackbar.service';
 import { SessionService } from '../../../shared/services/session.service';
 
 @Component({
-  selector: 'app-endpoints-page',
+selector: 'app-endpoints-page',
   templateUrl: './endpoints-page.component.html',
   styleUrls: ['./endpoints-page.component.scss'],
   providers: [{
     provide: ListConfig,
     useClass: EndpointsListConfigService,
-  }, EndpointListHelper]
+  }, EndpointListHelper],
+  standalone: false
 })
 export class EndpointsPageComponent implements AfterViewInit, OnDestroy, OnInit {
   public canRegisterEndpoint: Observable<StratosCurrentUserPermissions[]>;
