@@ -30,9 +30,10 @@ export interface MetricsConfig<T = any> {
 }
 
 @Component({
-  selector: 'app-metrics-chart',
+selector: 'app-metrics-chart',
   templateUrl: './metrics-chart.component.html',
-  styleUrls: ['./metrics-chart.component.scss']
+  styleUrls: ['./metrics-chart.component.scss'],
+  standalone: false
 })
 export class MetricsChartComponent implements OnInit, OnDestroy, AfterContentInit {
   @Input()

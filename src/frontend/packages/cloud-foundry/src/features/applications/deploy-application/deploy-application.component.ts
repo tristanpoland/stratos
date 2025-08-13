@@ -26,13 +26,14 @@ import { AUTO_SELECT_CF_URL_PARAM } from '../new-application-base-step/new-appli
 import { ApplicationDeploySourceTypes } from './deploy-application-steps.types';
 
 @Component({
-  selector: 'app-deploy-application',
+selector: 'app-deploy-application',
   templateUrl: './deploy-application.component.html',
   styleUrls: ['./deploy-application.component.scss'],
   providers: [
     CfOrgSpaceDataService,
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher }
   ],
+  standalone: false
 })
 export class DeployApplicationComponent implements OnInit, OnDestroy {
 

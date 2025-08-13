@@ -3,9 +3,10 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 @Component({
-  selector: 'app-env-var-view',
+selector: 'app-env-var-view',
   templateUrl: './env-var-view.component.html',
-  styleUrls: ['./env-var-view.component.scss']
+  styleUrls: ['./env-var-view.component.scss'],
+  standalone: false
 })
 export class EnvVarViewComponent {
 

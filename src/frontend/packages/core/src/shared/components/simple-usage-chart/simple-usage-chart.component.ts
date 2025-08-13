@@ -3,9 +3,10 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { IChartData, IChartThresholds, ISimpleUsageChartData, IUsageColor } from './simple-usage-chart.types';
 
 @Component({
-  selector: 'app-simple-usage-chart',
+selector: 'app-simple-usage-chart',
   templateUrl: './simple-usage-chart.component.html',
-  styleUrls: ['./simple-usage-chart.component.scss']
+  styleUrls: ['./simple-usage-chart.component.scss'],
+  standalone: false
 })
 export class SimpleUsageChartComponent {
   static BASE_COLOR_SELECTOR = 'simple-usage-graph-color';

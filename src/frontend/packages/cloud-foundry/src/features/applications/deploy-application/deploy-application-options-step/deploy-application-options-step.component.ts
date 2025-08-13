@@ -24,12 +24,13 @@ import {
 import { DEPLOY_TYPES_IDS } from '../deploy-application-steps.types';
 
 @Component({
-  selector: 'app-deploy-application-options-step',
+selector: 'app-deploy-application-options-step',
   templateUrl: './deploy-application-options-step.component.html',
   styleUrls: ['./deploy-application-options-step.component.scss'],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher }
-  ]
+  ],
+  standalone: false
 })
 export class DeployApplicationOptionsStepComponent implements OnInit, OnDestroy {
 

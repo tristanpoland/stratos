@@ -10,9 +10,10 @@ import { SnackBarService } from '../../../shared/services/snackbar.service';
 import { ConnectEndpointConfig, ConnectEndpointService } from '../connect.service';
 
 @Component({
-  selector: 'app-connect-endpoint-dialog',
+selector: 'app-connect-endpoint-dialog',
   templateUrl: './connect-endpoint-dialog.component.html',
   styleUrls: ['./connect-endpoint-dialog.component.scss'],
+  standalone: false
 })
 export class ConnectEndpointDialogComponent implements OnDestroy {
 

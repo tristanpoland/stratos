@@ -9,11 +9,12 @@ import { Chart } from '../../shared/models/chart';
 import { getMonocularEndpoint } from '../../stratos-monocular.helper';
 
 @Component({
-  selector: 'app-chart-details-usage',
+selector: 'app-chart-details-usage',
   templateUrl: './chart-details-usage.component.html',
   styleUrls: ['./chart-details-usage.component.scss'],
   viewProviders: [MatIconRegistry],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class ChartDetailsUsageComponent implements OnInit {
   @Input() chart: Chart;

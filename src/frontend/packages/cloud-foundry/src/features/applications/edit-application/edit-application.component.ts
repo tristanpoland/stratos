@@ -18,12 +18,13 @@ import { ApplicationService } from '../application.service';
 
 
 @Component({
-  selector: 'app-edit-application',
+selector: 'app-edit-application',
   templateUrl: './edit-application.component.html',
   styleUrls: ['./edit-application.component.scss'],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher }
-  ]
+  ],
+  standalone: false
 })
 export class EditApplicationComponent implements OnInit, OnDestroy {
 

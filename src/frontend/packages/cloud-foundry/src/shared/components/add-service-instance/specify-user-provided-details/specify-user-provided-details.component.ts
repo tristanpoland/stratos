@@ -32,9 +32,10 @@ import { CreateServiceFormMode, CsiModeService } from './../csi-mode.service';
 
 const { proxyAPIVersion, cfAPIVersion } = environment;
 @Component({
-  selector: 'app-specify-user-provided-details',
+selector: 'app-specify-user-provided-details',
   templateUrl: './specify-user-provided-details.component.html',
-  styleUrls: ['./specify-user-provided-details.component.scss']
+  styleUrls: ['./specify-user-provided-details.component.scss'],
+  standalone: false
 })
 export class SpecifyUserProvidedDetailsComponent implements OnDestroy {
 

@@ -25,9 +25,10 @@ export interface SideNavItem extends TabNavItem {
 }
 
 @Component({
-  selector: 'app-side-nav',
+selector: 'app-side-nav',
   templateUrl: './side-nav.component.html',
-  styleUrls: ['./side-nav.component.scss']
+  styleUrls: ['./side-nav.component.scss'],
+  standalone: false
 })
 
 export class SideNavComponent implements OnInit {
@@ -47,7 +48,7 @@ export class SideNavComponent implements OnInit {
   @Input() set iconMode(isIconMode: boolean) {
     if (isIconMode !== this.isIconMode) {
       this.isIconMode = isIconMode;
-      this.changedMode.next();
+      this.changedMode.next(void 0);
     }
   }
   get iconMode() {

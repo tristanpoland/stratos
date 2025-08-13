@@ -84,9 +84,10 @@ import {
 } from './list.component.types';
 
 @Component({
-  selector: 'app-list',
+selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss'],
+  standalone: false,
   animations: [
     trigger('list', [
       transition('* => in', [

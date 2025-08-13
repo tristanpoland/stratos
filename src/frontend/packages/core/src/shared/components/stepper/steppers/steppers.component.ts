@@ -20,11 +20,12 @@ import { SteppersService } from '../steppers.service';
 import { StepComponent, StepOnNextResult } from './../step/step.component';
 
 @Component({
-  selector: 'app-steppers',
+selector: 'app-steppers',
   templateUrl: './steppers.component.html',
   styleUrls: ['./steppers.component.scss'],
   providers: [SteppersService],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class SteppersComponent implements OnInit, AfterContentInit, OnDestroy {
 

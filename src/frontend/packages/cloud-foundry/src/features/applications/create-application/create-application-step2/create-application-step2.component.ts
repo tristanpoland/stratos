@@ -11,12 +11,13 @@ import { StepOnNextFunction } from '../../../../../../core/src/shared/components
 import { AppNameUniqueChecking } from '../../../../shared/directives/app-name-unique.directive/app-name-unique.directive';
 
 @Component({
-  selector: 'app-create-application-step2',
+selector: 'app-create-application-step2',
   templateUrl: './create-application-step2.component.html',
   styleUrls: ['./create-application-step2.component.scss'],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher }
-  ]
+  ],
+  standalone: false
 })
 export class CreateApplicationStep2Component implements OnInit {
 

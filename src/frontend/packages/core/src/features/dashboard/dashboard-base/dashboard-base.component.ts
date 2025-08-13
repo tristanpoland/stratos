@@ -28,9 +28,10 @@ import { PageHeaderService } from './../../../core/page-header-service/page-head
 import { SideNavItem } from './../side-nav/side-nav.component';
 
 @Component({
-  selector: 'app-dashboard-base',
+selector: 'app-dashboard-base',
   templateUrl: './dashboard-base.component.html',
-  styleUrls: ['./dashboard-base.component.scss']
+  styleUrls: ['./dashboard-base.component.scss'],
+  standalone: false
 })
 
 export class DashboardBaseComponent implements OnInit, OnDestroy, AfterViewInit {

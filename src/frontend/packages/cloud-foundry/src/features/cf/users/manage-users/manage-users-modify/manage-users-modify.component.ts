@@ -60,9 +60,10 @@ interface CfUserWithWarning extends CfUser {
 }
 
 @Component({
-    selector: 'app-manage-users-modify',
+selector: 'app-manage-users-modify',
     templateUrl: './manage-users-modify.component.html',
-    styleUrls: ['./manage-users-modify.component.scss']
+    styleUrls: ['./manage-users-modify.component.scss'],
+  standalone: false
 })
 export class UsersRolesModifyComponent implements OnInit, OnDestroy {
 

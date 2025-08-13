@@ -24,12 +24,13 @@ import { createGetApplicationAction } from '../../application.service';
 
 
 @Component({
-  selector: 'app-create-application-step3',
+selector: 'app-create-application-step3',
   templateUrl: './create-application-step3.component.html',
   styleUrls: ['./create-application-step3.component.scss'],
   providers: [
     { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher }
-  ]
+  ],
+  standalone: false
 })
 export class CreateApplicationStep3Component implements OnInit {
 

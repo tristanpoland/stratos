@@ -53,9 +53,10 @@ import { CreateServiceFormMode, CsiModeService } from '../csi-mode.service';
 
 
 @Component({
-  selector: 'app-specify-details-step',
+selector: 'app-specify-details-step',
   templateUrl: './specify-details-step.component.html',
   styleUrls: ['./specify-details-step.component.scss'],
+  standalone: false
 })
 export class SpecifyDetailsStepComponent implements OnDestroy, AfterContentInit {
 

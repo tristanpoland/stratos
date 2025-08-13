@@ -4,9 +4,10 @@ import { Store } from '@ngrx/store';
 import { RouterNav, AppState } from '@stratosui/store';
 
 @Component({
-  selector: 'app-snackbar-return',
+selector: 'app-snackbar-return',
   templateUrl: './snackbar-return.component.html',
-  styleUrls: ['./snackbar-return.component.scss']
+  styleUrls: ['./snackbar-return.component.scss'],
+  standalone: false
 })
 export class SnackBarReturnComponent extends SimpleSnackBar {
   returnLabel: string;

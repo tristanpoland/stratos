@@ -38,12 +38,13 @@ const tableColumnAction: ITableColumn<any> = {
 };
 
 @Component({
-  selector: 'app-table',
+selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
   providers: [
     TableRowExpandedService
-  ]
+  ],
+  standalone: false
 })
 export class TableComponent<T> implements OnInit, OnDestroy {
 
