@@ -1,53 +1,11 @@
-// Temporarily disable Angular Material theming import
-// // Temporarily disabled: @import '@angular/material/theming';
 @import './all-theme';
 
-// Import the theme
-// Temporarily disabled due to custom SASS handler compatibility issues
-// @import '~@stratosui/theme';
+// Import the theme - re-enable the existing Stratos theme system
+@import '~@stratosui/theme';
 
 $stratos-dark-theme-supported: false !default;
 
-// Themes - stratos-theme() function must be supplied by the theme
-// Fallback function for stratos-theme
-@function stratos-theme() {
-  @return (
-    default: (
-      theme: (
-        primary: #3371e3,
-        accent: #00bcd4,
-        warn: #f44336,
-        background: (
-          background: #fafafa,
-          card: #ffffff,
-          dialog: #ffffff
-        ),
-        foreground: (
-          base: #000000,
-          text: #212121,
-          secondary-text: #757575
-        )
-      ),
-      app-theme: (
-        app-background-color: #fafafa,
-        subdued-color: #707070,
-        side-nav: (
-          background: #2196f3,
-          text: white,
-          hover: rgba(255, 255, 255, 0.1)
-        ),
-        status: (
-          success: #4caf50,
-          warning: #ff9800,
-          danger: #f44336,
-          tentative: #9e9e9e,
-          info: #2196f3
-        )
-      )
-    )
-  );
-}
-
+// Themes - stratos-theme() function is supplied by the theme package
 $stratos-themes: stratos-theme();
 
 // stratos-theme() can return a single theme rather than a map of default and dark themes
@@ -60,8 +18,7 @@ $stratos-themes: stratos-theme();
 
 // Import any custom scss that the theme defines
 // This import defines the mixin 'apply-theme'
-// Temporarily disabled due to custom SASS handler compatibility issues
-// @import '~@stratosui/theme/extensions';
+@import '~@stratosui/theme/extensions';
 
 // Default theme ( = light theme)
 $stratos-theme: map-get($stratos-themes, default);
@@ -74,20 +31,24 @@ $theme: map-get($stratos-theme, theme);
 
   body.stratos {
     .dark-theme {
-      // Temporarily disabled: @include angular-material-theme($dark-theme);
-      // Temporarily disabled: @include app-theme($dark-stratos-theme);
+      @include angular-material-theme($dark-theme);
+      @include app-theme($dark-stratos-theme);
       // Apply theme to extensions
-      // Temporarily disabled: @include apply-theme($dark-stratos-theme);
+      @include apply-theme($dark-stratos-theme);
     }
   }
 }
 
 .default {
-  // Temporarily disabled: @include angular-material-theme($theme);
-  // Temporarily disabled: @include app-theme($stratos-theme);
+  // Apply Angular Material theme
+  @include angular-material-theme($theme);
+  
+  // Apply custom app theme
+  @include app-theme($stratos-theme);
+  
   // Apply theme to extensions
-  // Temporarily disabled: @include apply-theme($stratos-theme);
+  @include apply-theme($stratos-theme);
 }
 
-// Import mat-core
-// Temporarily disabled: @include mat-core;
+// Include Angular Material core styles
+@include mat-core();
