@@ -1,4 +1,4 @@
-@import '@angular/material/_theming';
+@import '@angular/material/theming';
 // Plus imports for other components in your app.
 
 // Include the base styles for Angular Material core. We include this here so that you only
@@ -7,6 +7,8 @@
 
 // Custom palette for monocular.
 $color-base: #3371e3;
+$black-87-opacity: rgba(0, 0, 0, 0.87);
+$white: #ffffff;
 
 $mat-monocular: (
   50:  #bdd1f6, // #e3f2fd,
@@ -28,16 +30,16 @@ $mat-monocular: (
     100: $black-87-opacity,
     200: $black-87-opacity,
     300: $black-87-opacity,
-    400: white,
-    500: white,
-    600: white,
-    700: white,
-    800: white,
-    900: white,
+    400: $white,
+    500: $white,
+    600: $white,
+    700: $white,
+    800: $white,
+    900: $white,
     A100: $black-87-opacity,
     A200: $black-87-opacity,
-    A400: white,
-    A700: white,
+    A400: $white,
+    A700: $white,
   )
 );
 
@@ -56,7 +58,7 @@ $monocular-app-theme: mat-light-theme($monocular-app-primary, $monocular-app-acc
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-// @include angular-material-theme($monocular-app-theme);
+@include angular-material-theme($monocular-app-theme);
 
 // Base palette for the project
 $layout-dark: #333239;
@@ -66,7 +68,7 @@ $layout-text: #38383F;
 $text-white: white;
 $background-light: #EAEDEF;
 $background-white: white;
-$header-backgound-gradient: linear-gradient(to left, $layout-base, mat-color($monocular-app-primary, 900));
+$header-backgound-gradient: linear-gradient(to left, $layout-base, $color-base);
 $border-color: #D7D9DD;
 
 // Other common sizes
@@ -112,7 +114,7 @@ mat-form-field {
   }
 
   &:not(.mat-focused) .mat-input-placeholder {
-     color: darken($layout_light, 25);
+     color: darken($layout-light, 25);
   }
 
   &.mat-input--big {

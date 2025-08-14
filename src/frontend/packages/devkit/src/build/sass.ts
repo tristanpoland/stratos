@@ -23,9 +23,13 @@ export class SassHandler {
           if (innerRule.use !== undefined) {
             innerRule.use.forEach(p => {
               if (p.loader && p.loader.indexOf('sass-loader') > 0) {
-                p.options.sassOptions = {
-                  importer: this.customSassImport(config)
-                };
+                // Ensure options exists
+                if (!p.options) p.options = {};
+                if (!p.options.sassOptions) p.options.sassOptions = {};
+                
+                // Use modern API with implementation
+                p.options.implementation = require('sass');
+                p.options.sassOptions.importer = this.customSassImport(config);
               }
             });
           }
