@@ -27,7 +27,7 @@ export class SassHandler {
                 if (!p.options) p.options = {};
                 if (!p.options.sassOptions) p.options.sassOptions = {};
                 
-                // Use modern API with implementation
+                // Configure SASS with appropriate options
                 p.options.implementation = require('sass');
                 p.options.sassOptions.importer = this.customSassImport(config);
               }
