@@ -95,21 +95,21 @@
             "proxyConfig": "proxy.conf.js",
             "ssl": true,
             "sslKey": "dev-ssl/server.key",
-            "browserTarget": "stratos:build"
+            "buildTarget": "stratos:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "stratos:build:production"
+              "buildTarget": "stratos:build:production"
             },
             "desktop": {
-              "browserTarget": "stratos:build:desktop"
+              "buildTarget": "stratos:build:desktop"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "stratos:build"
+            "buildTarget": "stratos:build"
           }
         }
       }

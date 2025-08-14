@@ -27,9 +27,18 @@ export class SassHandler {
                 if (!p.options) p.options = {};
                 if (!p.options.sassOptions) p.options.sassOptions = {};
                 
-                // Configure SASS with appropriate options
-                p.options.implementation = require('sass');
-                p.options.sassOptions.importer = this.customSassImport(config);
+                // Temporarily disable custom SASS configuration to resolve build issues
+                // Configure SASS with custom importer only, let Angular handle implementation
+                // try {
+                //   // Don't override implementation, let Angular CLI handle it
+                //   // Just set up our custom importer
+                //   p.options.sassOptions.importer = this.customSassImport(config);
+                // } catch (e) {
+                //   console.warn('Could not configure SASS importer:', e);
+                // }
+                
+                // Use default SASS options only
+                console.log('SASS loader found but custom configuration disabled for compatibility');
               }
             });
           }

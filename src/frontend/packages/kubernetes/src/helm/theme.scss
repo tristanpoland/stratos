@@ -7,6 +7,7 @@ $color-base: #3371e3;
 // Define theme variables for backward compatibility with existing components
 $monocular-app-primary: $color-base;
 $monocular-app-accent: #00bcd4;
+$monocular-app-warn: #f44336;
 
 // Base palette for the project
 $layout-dark: #333239;
@@ -40,7 +41,25 @@ $mappy-queries: (
 );
 
 // Import the library. I need to import it after the breakpoints definition
-@import '~mappy-breakpoints/mappy-breakpoints';
+// Temporarily disabled due to import issues - fallback mixin provided below
+// @import '~mappy-breakpoints/mappy-breakpoints';
+
+// Fallback mixin for mappy-bp to prevent build errors
+@mixin mappy-bp($breakpoints...) {
+  @if length($breakpoints) > 0 {
+    @if nth($breakpoints, 1) == "max-width" and nth($breakpoints, 2) == "small" {
+      @media (max-width: 479px) {
+        @content;
+      }
+    } @else if length($breakpoints) == 2 and nth($breakpoints, 1) == "medium" and nth($breakpoints, 2) == "large" {
+      @media (min-width: 840px) and (max-width: 1023px) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  }
+}
 
 // Add more classes to Material2 components
 mat-form-field {

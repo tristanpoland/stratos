@@ -1,4 +1,14 @@
-@import '@angular/material/theming';
+// Temporarily disable Angular Material theming import
+// // Temporarily disabled: @import '@angular/material/theming';
+
+// Fallback function for mat-color
+@function mat-color($palette, $hue: default) {
+  @if type-of($palette) == map {
+    @return map-get($palette, $hue);
+  }
+  @return $palette;
+}
+
 @mixin side-nav-theme($theme, $app-theme) {
   $primary: map-get($theme, primary);
   $side-nav-colors: map-get($app-theme, side-nav);

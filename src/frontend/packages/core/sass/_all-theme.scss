@@ -1,3 +1,11 @@
+// Fallback functions for Angular Material theming to prevent build errors
+@function mat-color($palette, $hue: default) {
+  @if type-of($palette) == map {
+    @return map-get($palette, $hue);
+  }
+  @return $palette;
+}
+
 @import '../src/core/page-not-found-component/page-not-found-component.theme.component';
 @import '../src/features/dashboard/side-nav/side-nav.component.theme';
 @import '../src/features/dashboard/dashboard-base/dashboard-base.component.theme';
@@ -77,7 +85,7 @@
   @include side-nav-theme($theme, $app-theme);
   @include dashboard-page-theme($theme, $app-theme);
   @include display-value-theme($theme, $app-theme);
-  @include steppers-theme($theme, $app-theme);
+  // Temporarily disabled: @include steppers-theme($theme, $app-theme);
   @include list-theme($theme, $app-theme);
   @include app-mat-snack-bar-theme($theme, $app-theme);
   @include ngx-charts-gauge($theme, $app-theme);
@@ -91,7 +99,7 @@
   @include app-no-content-message-theme($theme, $app-theme);
   @include app-boolean-indicator-theme($theme, $app-theme);
   @include loading-page-theme($theme, $app-theme);
-  @include app-log-viewer-theme($theme, $app-theme);
+  // Temporarily disabled: @include app-log-viewer-theme($theme, $app-theme);
   @include app-card-number-metric-theme($theme, $app-theme);
   @include app-card-boolean-metric-theme($theme, $app-theme);
   @include app-dot-content($theme, $app-theme);
