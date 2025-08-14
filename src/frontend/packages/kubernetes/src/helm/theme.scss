@@ -1,28 +1,12 @@
-@use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the base styles for Angular Material core. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-@include mat.core();
+// Temporarily disable Angular Material theme to isolate issues
+// @use '@angular/material' as mat;
 
 // Custom palette for monocular.
 $color-base: #3371e3;
 
-// Create theme using the new Angular Material v20 API
-$monocular-app-theme: mat.define-theme((
-  color: (
-    theme-type: light,
-    primary: mat.$blue-palette,
-    tertiary: mat.$cyan-palette,
-  ),
-));
-
-// Include theme styles for core and each component used in your app.
-@include mat.all-component-themes($monocular-app-theme);
-
 // Define theme variables for backward compatibility with existing components
-$monocular-app-primary: mat.$blue-palette;
-$monocular-app-accent: mat.$cyan-palette;
+$monocular-app-primary: $color-base;
+$monocular-app-accent: #00bcd4;
 
 // Base palette for the project
 $layout-dark: #333239;
